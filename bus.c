@@ -5,7 +5,7 @@
 struct bus
 {
     char passanger[20];
-    int seatnumber[i]; 
+    int seatnumber; 
     bool status;
 };
 
@@ -14,18 +14,20 @@ int main() {
 
     
     int choice;
-    while (true)
+    bool loop = true;
+    while (loop)
     {
         //display
         printf("---Bus reservation stimulator---\n");
         printf("1. view seats status\n");
         printf("2. Book seat \n");
         printf("3. cancel seat\n");
-        printf("4. exit");
+        printf("4. exit\n");
 
         printf("Enter your choice : \n");
         scanf("%d",&choice);
 
+       
         switch(choice){
             case 1:
             printf("available seats ");
@@ -47,7 +49,7 @@ int main() {
 
             case 4:
             printf("exit loop ");
-            
+            loop = false;
             break;
         }
         //end of display
